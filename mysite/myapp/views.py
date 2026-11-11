@@ -34,4 +34,8 @@ def home_view(request):
     return render(request, 'myapp/home.html', {'news_list': latest_news})
 
 
+def lk(request):
+    context = {
 
+    }
+    return render(request, 'myapp/lk.html', context=context)

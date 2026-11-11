@@ -1,38 +1,73 @@
 {% extends 'base.html' %}
 {% block title %}
-   About me
+About me
 {% endblock %}
 
 
 {% block content %}
 
-   <h1>Мой сайт... </h1>
-   <h2>Был создан из интереса. Пока нет идей, вернусь позже...</h2>
+<h1>Найди питомца </h1>
+<h2>Добро пожаловать на наш сайт!</h2>
 
-    <br/>
-    <h3>И, дальше, я также понятия не имею, что написать, поэтому я добавила пару обзацев с рандомным lorem:</h3>
+<br/>
+<div class="page-layout">
+    <!-- Левая половина страницы (делится на 3 части по горизонтали) -->
+    <div class="left-side">
+        <div class="left-item"><a href="lk" class="box">
 
-    <div class="news-widget">
-    <h2>Последние новости партнеров</h2>
-    <ul>
-        {% for news in news_list %}
-            <li>
-                <!-- Ссылка на первоисточник и заголовок -->
-                <a href="{{ news.link }}" target="_blank" rel="noopener noreferrer">
-                    {{ news.title }}
-                </a>
+            <img src="/media/autem_cat.jpeg" alt="Питомец которого забрали">
+        </a>
+            <a href="lk" class="box">
 
-                <!-- Дата публикации (если передается сайтом) -->
-                {% if news.published %}
-                    <span class="news-date">({{ news.published }})</span>
-                {% endif %}
-            </li>
-        {% empty %}
-            <li>Не удалось загрузить новости. Пожалуйста, зайдите позже.</li>
-        {% endfor %}
-    </ul>
+                <img src="/media/autem_cat1.jpeg" alt="Питомец которого забрали">
+            </a>
+
+        </div>
+
+        <a href="/lk/" class="box wide-caption-box">
+            <span class="top-caption">Ищем самые добрые ручки</span>
+            <img src="/media/cat_with_pk.jpeg" alt="Они уже дома">
+        </a>
+
+
+        <div class="left-item"><a href="lk" class="box">
+
+            <img src="/media/cat_sleep_fantasy.jpeg" alt="Питомец которого забрали">
+        </a>
+            <a href="lk" class="box">
+
+                <img src="/media/winter_cat.jpeg" alt="Питомец которого забрали">
+            </a>
+
+        </div>
     </div>
 
+    <!-- Правая половина страницы (делится на 5 частей по вертикали) -->
+    <main class="right-side">
+        <div><a href="/lk/" class="box wide-caption-box">
+            <span class="top-caption">Потеряшки Их ждут дома</span>
+            <img src="/media/3_dogs.jpeg" alt="Они уже дома">
+        </a></div>
+
+        <div><a href="/lk/" class="box wide-caption-box">
+            <span class="top-caption">Услуги для питомцев</span>
+            <img src="/media/kreativnyy_gruming.jpg" alt="Они уже дома">
+        </a></div>
+
+        <div><a href="/lk/" class="box wide-caption-box">
+            <span class="top-caption">Товары для питомцев<</span>
+            <img src="/media/toys.jpg" alt="Они уже дома">
+        </a></div>
+
+        <div><a href="/lk/" class="box wide-caption-box">
+            <span class="top-caption">Справочная информация</span>
+            <img src="/media/fq.png" alt="Они уже дома">
+        </a></div>
+
+
+    </main>
+</div>
+</div>
 
 
 {% endblock %}
